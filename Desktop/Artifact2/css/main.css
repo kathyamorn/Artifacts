@@ -1,0 +1,18 @@
+#username{
+    display: none;
+}
+#email{
+    display: block;
+}
+#password{
+    display: block;
+}
+#loginBtn{
+    border:2px solid;
+}
+#regBtn{
+    border:2px solid;
+}
+#submitBtn{
+    display: block;
+}
