@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Room</title>
+    </head>
+    <style>
+        #status{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            border: 1px solid;
+        }
+        #username{
+            display: inline-block;
+        }
+        #chat_room{
+            width:250px;
+            height: 250px;
+            border: 1px solid;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            overflow: auto;
+            background-color: white;
+        }
+        #reply_div{
+            border: 1px solid;
+        }
+        #chat_status{
+            position:relative;
+            bottom:0;
+            left:0;
+            }
+        #sendBox{
+            position: absolute;
+            bottom: 0;
+            right: 1vw;
+        }
+        #chat_room{
+            display: none;
+        }
+        #chatroomBtn{
+            display: inline-block;
+            border: 1px solid;
+        }
+        .replies{
+            background-color: #c8ffa6;
+            padding: 0px;
+            margin: 1px;
+            border: 1px solid;
+        }
+    </style>
+    <body>
+        <div id="reply_div">
+            <div id ="topic_title"></div>
+            <div id ="topic_desp"></div>
+            <input type="text" id="replyMsg"/>
+            <button id="replyBtn">Reply</button>
+            <button id = "chatroomBtn">chatroom</button>
+            <div id = reply_display></div>
+        </div>
+        
+        <div id="chat_room">
+            <div id="display"></div>
+            <div id="sendBox">
+                <input type="text" id="msg"/>
+                <button id="send">Send</button>
+                <div id="chat_status"></div>
+            </div>
+            
+        </div>
+        <div id="status"></div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/scripts/roombundle.js"></script>
+    </body>
+</html>
